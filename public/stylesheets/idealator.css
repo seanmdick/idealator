@@ -14,6 +14,10 @@ body {
     margin: 0px;
 }
 
+div {
+  position: relative;
+}
+
 /* Comment/uncomment to turn on/off main content centering */
 .content {
     /* Center the content on the page */
@@ -34,23 +38,23 @@ body {
 .header {
     margin-bottom: 40px;
 }
+
+/* Flash messaging */
 .flash {
   position: absolute;
   top: 15px;
   right: 15px;
   display: none;
 }
-/* Flash messaging */
+
 .error {
-    border: 10px solid #cc0000;
+    border: 5px solid #cc0000;
     background: #ffffff;
-    padding: 20px;
-/*    margin: 20px;*/
+    padding: 10px;
 }
 
 .notice {
-    border: 10px solid #4bc84b;
+    border: 5px solid #4bc84b;
     background: #ffffff;
-    padding: 20px;
-/*    margin: 20px;*/
+    padding: 10px;
 }
