@@ -1,5 +1,5 @@
 Idealator::Application.routes.draw do
-  resources :votes
+  resource :votes
 
   resources :topics
   root :to => "topics#index"
