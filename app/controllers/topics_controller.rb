@@ -42,8 +42,10 @@ class TopicsController < ApplicationController
     respond_to do |format|
       if @topic.save
         format.html { redirect_to(topics_path :notice => 'Topic was successfully created.') }
+        format.js {}
       else
         format.html { render :action => "new" }
+        format.js {}
       end
     end
   end

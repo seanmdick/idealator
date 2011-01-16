@@ -1,6 +1,6 @@
 <h1>Listing topics</h1>
 
-<table>
+<table class='topics_list'>
   <tr>
     <th>Title</th>
     <th>Description</th>
@@ -9,18 +9,15 @@
     <th></th>
   </tr>
 
-<% @topics.each do |topic| %>
-  <tr id="<%= dom_id topic %>">
-    <td><%= link_to topic.title, topic %></td>
-    <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-    <td><%= link_to 'Delete', topic, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><span class="vote_count"><%= pluralize(topic.votes.length, "vote") %></span></td>
-    <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post, :remote => true %></td>
-    <td><%= link_to '-1', votes_path(:topic_id => topic.id), :method => :delete, :remote => true %></td>
-  </tr>
-<% end %>
+<%= render :partial => "item_topic", :collection => @topics, :as => :topic%>
 </table>
 
 <br />
-
-<%= link_to 'New Topic', new_topic_path %>
+<div class='form_container link'>
+  <div class='topic_form'>
+    <%= render :partial => "form", :locals => {:topic => Topic.new} %>
+  </div>
+  <span class='topic_link'>
+    <%= link_to 'New Topic', "#", :class => :new_topic %>
+  </span>
+</div>

@@ -1,5 +1,5 @@
 var row = $('#<%= dom_id @topic %>');
 Flash.message = "<%= flash.now[:notice] || flash.now[:error] %>";
-Flash.kind = "<%= flash.now[:notice].try(:blank?) ? 'error' : 'notice' %>";
+Flash.kind = "<%= flash.now[:notice].blank? ? 'error' : 'notice' %>";
 row.find('.vote_count').text("<%=pluralize @topic.votes.count, "vote"%>");
 row.find('td').effect("highlight");
