@@ -37,15 +37,15 @@ body {
 
 /* Flash messaging */
 .error {
-    border: 10px solid #cc0000;
+    border: 5px solid #cc0000;
     background: #ffffff;
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
 }
 
 .notice {
-    border: 10px solid #4bc84b;
+    border: 5px solid #4bc84b;
     background: #ffffff;
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
 }
