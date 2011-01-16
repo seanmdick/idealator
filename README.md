@@ -8,4 +8,5 @@
 * add jquery js rails replacement in template
 * make it look nicer (get a designer to donate some time)
 * write specs
-* write devchix wiki curriculum (http://www.wiki.devchix.com/index.php?title=Rails_3_Curriculum_Part_2)
+* write devchix wiki curriculum 
+** [Workshop 2 Wiki](http://www.wiki.devchix.com/index.php?title=Rails_3_Curriculum_Part_2)
