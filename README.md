@@ -4,6 +4,7 @@
 * jasmine works with rails 3, but needs some love to get it up and running
 
 ## Things still to do ##
-* make a template to include jasmine and everything else
+* make a template to include jasmine
+* add jquery js rails replacement in template
 * make it look nicer (get a designer to donate some time)
 * write specs
