@@ -1,22 +1,51 @@
+/* Comment/uncomment to turn on/off background images */
 body {
+    /* Tiled background image */
     background: url("../images/background_tiled.gif") repeat;
+
+    /* Main text color */
     color: #000000;
+
+    /* Main text font */
+    font-family: "Arial", sans-serif;
+    
+    /* Get rid of some interior padding on the whole browser layout */
     padding: 0px;
     margin: 0px;
 }
 
+/* Comment/uncomment to turn on/off main content centering */
 .content {
-    background: #ffffff;
-    padding: 40px;
+    /* Center the content on the page */
     width: 800px;
     margin: 0px auto;
+    padding: 40px;
     
-    /* Advanced CSS3 */
+    /* Center background color */
+    background: #ffffff;
+    
+    /* Advanced CSS3 shadowing on the box*/
     box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
+/* Add some space below the header image */
 .header {
     margin-bottom: 40px;
+}
+
+/* Flash messaging */
+.error {
+    border: 10px solid #cc0000;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px;
+}
+
+.notice {
+    border: 10px solid #4bc84b;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px;
 }
