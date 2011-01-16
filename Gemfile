@@ -37,5 +37,5 @@ gem 'cucumber-rails'
 gem 'cucumber'
 gem 'spork'
 gem 'launchy'
-gem 'jasmine', :path => 'vendor/gems/jasmine'
+gem 'jasmine'
 end
