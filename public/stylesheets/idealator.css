@@ -34,18 +34,23 @@ body {
 .header {
     margin-bottom: 40px;
 }
-
+.flash {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: none;
+}
 /* Flash messaging */
 .error {
     border: 10px solid #cc0000;
     background: #ffffff;
     padding: 20px;
-    margin: 20px;
+/*    margin: 20px;*/
 }
 
 .notice {
     border: 10px solid #4bc84b;
     background: #ffffff;
     padding: 20px;
-    margin: 20px;
+/*    margin: 20px;*/
 }
