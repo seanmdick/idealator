@@ -10,11 +10,11 @@
   </tr>
 
 <% @topics.each do |topic| %>
-  <tr>
+  <tr id="<%= dom_id topic %>">
     <td><%= link_to topic.title, topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
     <td><%= link_to 'Delete', topic, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= pluralize(topic.votes.length, "vote") %></td>
+    <td><span class="vote_count"><%= pluralize(topic.votes.length, "vote") %></span></td>
     <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post, :remote => true %></td>
   </tr>
 <% end %>
