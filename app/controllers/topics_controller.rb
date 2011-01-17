@@ -80,6 +80,8 @@ class TopicsController < ApplicationController
     case params[:column]
     when 'title'
       session[:topic_order] = "title asc"
+    when 'votes'
+      session[:topic_order] = "total_votes desc"
     else
       session[:topic_order] = "updated_at desc"
     end

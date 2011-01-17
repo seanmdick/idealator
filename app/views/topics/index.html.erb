@@ -4,7 +4,7 @@
   <tr>
     <th><%= link_to 'Topics', sort_change_topics_path(:column => :title), :method => :post %></th>
     <th></th>
-    <th>Votes</th>
+    <th><%= link_to 'Votes', sort_change_topics_path(:column => :votes), :method => :post %></th>
     <th></th>
     <th><%= link_to 'Updated', sort_change_topics_path(:column => :updated_at), :method => :post %></th>
   </tr>
