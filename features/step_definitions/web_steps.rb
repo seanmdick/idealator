@@ -105,6 +105,9 @@ Then /^(?:|I )should see JSON:$/ do |expected_json|
 end
 
 Then /^(?:|I )should see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
+  # Amy's crude debugging helper. :)
+  # 
+  # puts page.body.to_s.gsub("\n", "\n>> ") + "\n"
   with_scope(selector) do
     if page.respond_to? :should
       page.should have_content(text)
