@@ -8,6 +8,7 @@
 * The 'vote down' function for a topic
 * AJAX-ified voting on a topic (using rails 3 jquery ujs)
 * AJAX-ified creating a topic  (using rails 3 jquery ujs)
+* Sortable Topics listing (using sessions and custom action route)
 
 ## Lessons learned so far ##
 
