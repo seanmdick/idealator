@@ -1,1 +1,3 @@
-$('.topics_list').append("<%= escape_javascript(render(:partial => "item_topic", :locals => {:topic => @topic})) %>");
+<% item_topic_html = render(:partial => "item_topic", :locals => {:topic => @topic})  %>
+$('.topics_list').append("<%= escape_javascript(item_topic_html) %>")
+$('.topics_list').delay(800).find("#topic_<%= @topic.id %> td").effect("highlight", {}, 1500);
