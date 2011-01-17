@@ -1,11 +1,6 @@
 class Vote < ActiveRecord::Base
-  belongs_to :topic
-  
-  after_save :update_topic_updated_at
-  
-  private
-  
-  def update_topic_updated_at
-    topic.update_attribute(:updated_at, self.updated_at)
-  end
+  # Belongs to one topic (that received the vote)
+  # Touch updates the Topic when the vote is saved
+  # (http://ryandaigle.com/articles/2009/4/20/what-s-new-in-edge-rails-touching)
+  belongs_to :topic, :touch => true
 end
