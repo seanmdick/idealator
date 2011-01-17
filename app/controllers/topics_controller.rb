@@ -2,7 +2,16 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.xml
   def index
-    @topics = Topic.order(session[:topic_order] || 'updated_at desc').all
+    # Use a "scope" to find Topics and sort them.  This concentrates the database
+    # logic in the Topic model.
+    case session[:topic_order]
+    when 'title'
+      @topics = Topic.title_order.all
+    when 'votes'
+      @topics = Topic.total_votes_order.all
+    else
+      @topics = Topic.updated_at_order.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -77,14 +86,19 @@ class TopicsController < ApplicationController
   
   # Sets the column to sort the index page
   def sort_change
-    case params[:column]
-    when 'title'
-      session[:topic_order] = "title asc"
-    when 'votes'
-      session[:topic_order] = "total_votes desc"
+    # If the :column web parameter is valid then save it.
+    valid_column_names_for_sorting = ['title', 'votes', 'updated_at']
+    if valid_column_names_for_sorting.include?(params[:column])
+      session[:topic_order] = params[:column]
     else
-      session[:topic_order] = "updated_at desc"
+      session[:topic_order] = 'updated_at'
     end
+
+    # Note: You could compact the logic above using a "ternary" comparison:
+    #
+    # session[:topic_order] = valid_column_names_for_sorting.include?(params[:column]) ? params[:column] : 'updated_at'
+    #
+    # It is space-efficient but perhaps harder to read.
     
     redirect_to topics_path
   end
