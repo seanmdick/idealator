@@ -1,0 +1,5 @@
+/* Required to make absolute positioning work right. */
+
+div {
+  position: relative;
+}

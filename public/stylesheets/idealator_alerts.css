@@ -1,0 +1,19 @@
+/* Flash messaging */
+.flash {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: none;
+}
+
+.error {
+    border: 5px solid #cc0000;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.notice {
+    border: 5px solid #4bc84b;
+    background: #ffffff;
+    padding: 10px;
+}

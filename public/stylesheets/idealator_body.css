@@ -1,0 +1,15 @@
+/* Comment/uncomment to turn on/off background images */
+body {
+    /* Tiled background image */
+    background: url("../images/background_tiled.gif") repeat;
+
+    /* Main text color */
+    color: #000000;
+
+    /* Main text font */
+    font-family: "Arial", sans-serif;
+    
+    /* Get rid of some interior padding on the whole browser layout */
+    padding: 0px;
+    margin: 0px;
+}
