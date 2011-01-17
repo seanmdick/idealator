@@ -2,7 +2,7 @@
 body {
     /* Tiled background image */
     background: url("../images/background_tiled.gif") repeat;
-    
+
     /* Main font */
     font-family: "Helvetica", "Arial", sans-serif;
 
@@ -18,8 +18,4 @@ body {
 p, ol, ul, li, td, th, input[type="text"], textarea {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.2em;
-}
-
-.no_wrap {
-    white-space: nowrap;
 }
