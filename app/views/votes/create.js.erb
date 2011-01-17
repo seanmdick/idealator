@@ -2,5 +2,5 @@ var row = $('#<%= dom_id @topic %>');
 Flash.message = "<%= flash.now[:notice] || flash.now[:error] %>";
 Flash.kind = "<%= flash.now[:notice].blank? ? 'error' : 'notice' %>";
 row.find('.vote_count').text("<%= pluralize @topic.votes.count, "vote" %>");
-row.find('.updated_at').text("<%= format_time_ago Time.now %>");
+row.find('.updated_at').text("<%= time_ago_in_words(Time.now) %>");
 row.find('td').effect("highlight");
