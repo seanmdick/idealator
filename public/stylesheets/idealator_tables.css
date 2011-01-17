@@ -18,12 +18,12 @@
     text-align: left;
 }
 
-.topics_list .topic-title {
+.topics_list .topic_title {
     font-size: 200%;
 }
 
-.topics_list .topic-title a:link,
-.topics_list .topic-title a:visited {
+.topics_list .topic_title a:link,
+.topics_list .topic_title a:visited {
     text-decoration: none;
 }
 

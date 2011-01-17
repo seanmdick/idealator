@@ -23,9 +23,9 @@ h1 {
     margin-bottom: 40px;
 }
 
-.header a.logo-link:link,
-.header a.logo-link:visited,
-.header a.logo-link:hover {
+.header a.logo_link:link,
+.header a.logo_link:visited,
+.header a.logo_link:hover {
     text-decoration: none;
     background: transparent;
 }
