@@ -1,8 +1,13 @@
 Idealator::Application.routes.draw do
   resource :votes
 
-  resources :topics
-  match 'topics_list_sort_change/:column', :to => 'topics#sort_change', :as => 'topics_list_sort_change'
+  # Generates the default REST routes (index, create, destroy, show, new, edit)
+  resources :topics do
+    # Adds custom sort_change_topics_url route on the 'collection' (no member id required)
+    # Points to topics#sort_change in the TopicsController
+    post 'sort_change', :on => :collection
+  end
+
   root :to => "topics#index"
 
   # The priority is based upon order of creation:
