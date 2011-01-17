@@ -4,7 +4,7 @@
     <%= link_to 'Edit', edit_topic_path(topic) %>
     <%= link_to 'Delete', topic, :confirm => 'Are you sure?', :method => :delete %>
   </td>
-  <td><span class="vote_count"><%= pluralize(topic.votes.length, "vote") %></span></td>
+  <td><div class="vote_count"><%= pluralize(topic.votes.length, "vote") %></span></td>
   <td>
     <%= link_to '+1', votes_path(:topic_id => topic.id), :class => 'button_link', :method => :post, :remote => true %>
     <%= link_to '-1', votes_path(:topic_id => topic.id), :class => 'button_link', :method => :delete, :remote => true %>

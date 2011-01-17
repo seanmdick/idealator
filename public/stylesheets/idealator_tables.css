@@ -22,6 +22,10 @@
     font-size: 200%;
 }
 
+.topics_list .vote_count {
+  width: 60px;
+}
+
 .topics_list .topic_title a:link,
 .topics_list .topic_title a:visited {
     text-decoration: none;
