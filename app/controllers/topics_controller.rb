@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.xml
   def index
-    @topics = Topic.all
+    @topics = Topic.order(session[:topic_order] || 'updated_at desc').all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -73,5 +73,17 @@ class TopicsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(topics_url) }
     end
+  end
+  
+  # Sets the column to sort the index page
+  def sort_change
+    case params[:column]
+    when 'title'
+      session[:topic_order] = "title asc"
+    else
+      session[:topic_order] = "updated_at desc"
+    end
+    
+    redirect_to topics_path
   end
 end

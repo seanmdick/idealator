@@ -2,6 +2,7 @@ Idealator::Application.routes.draw do
   resource :votes
 
   resources :topics
+  match 'topics_list_sort_change/:column', :to => 'topics#sort_change', :as => 'topics_list_sort_change'
   root :to => "topics#index"
 
   # The priority is based upon order of creation:

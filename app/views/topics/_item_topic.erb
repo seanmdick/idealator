@@ -1,12 +1,13 @@
 <tr id="<%= dom_id topic %>">
   <td class="topic_title"><%= link_to topic.title, topic %></td>
-  <td>
+  <td class="no_wrap">
     <%= link_to 'Edit', edit_topic_path(topic) %>
     <%= link_to 'Delete', topic, :confirm => 'Are you sure?', :method => :delete %>
   </td>
-  <td><div class="vote_count"><%= pluralize(topic.votes.length, "vote") %></span></td>
-  <td>
+  <td class="no_wrap"><span class="vote_count"><%= pluralize(topic.votes.length, "vote") %></span></td>
+  <td class="no_wrap">
     <%= link_to '+1', votes_path(:topic_id => topic.id), :class => 'button_link', :method => :post, :remote => true %>
     <%= link_to '-1', votes_path(:topic_id => topic.id), :class => 'button_link', :method => :delete, :remote => true %>
   </td>
+  <td class="no_wrap"><span class="updated_at"><%= format_time_ago topic.updated_at %></span></td>
 </tr>

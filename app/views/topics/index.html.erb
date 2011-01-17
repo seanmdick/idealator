@@ -2,10 +2,11 @@
 
 <table class='topics_list'>
   <tr>
-    <th>Topic</th>
+    <th><%= link_to 'Topics', topics_list_sort_change_path(:column => :title) %></th>
     <th></th>
     <th>Votes</th>
     <th></th>
+    <th><%= link_to 'Updated', topics_list_sort_change_path(:column => :updated_at) %></th>
   </tr>
 
 <%= render :partial => "item_topic", :collection => @topics, :as => :topic%>
