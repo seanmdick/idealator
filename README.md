@@ -1,12 +1,22 @@
-# Workshop 2 Baseline project #
+# Workshop 2 Baseline Project #
+
+## Things Added ##
+
+* Modified layout file for site
+* Logo image to public/images
+* Idealator Site Styles
+* The 'vote down' function for a topic
+* AJAX-ified voting on a topic (using rails 3 jquery ujs)
+* AJAX-ified creating a topic  (using rails 3 jquery ujs)
+
 ## Lessons learned so far ##
-* apparently rails 3 whitelists xhr requests, no need for that extending the xhr to include the anti-forgery token
-* jasmine works with rails 3, but needs some love to get it up and running
+
+* Rails 3 whitelists xhr requests, no need for including the anti-forgery token
 
 ## Things still to do ##
-* make a template to include jasmine
-* add jquery js rails replacement in template
-* make it look nicer (get a designer to donate some time)
-* write specs
-* write devchix wiki curriculum 
-* [Workshop 2 Wiki](http://www.wiki.devchix.com/index.php?title=Rails_3_Curriculum_Part_2)
+
+* Make a template to include jasmine
+* Add jquery js rails replacement in template
+* Make it look nicer (get a designer to donate some time)
+* Write specs
+* Write devchix wiki curriculum: [Workshop 2 Wiki](http://www.wiki.devchix.com/index.php?title=Rails_3_Curriculum_Part_2)
