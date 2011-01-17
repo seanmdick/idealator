@@ -5,8 +5,8 @@ Feature: Votes
   Background: Make sure that we have a topic
     Given I go to the topics page
     And I follow "New Topic"
-    And I fill in "Title" with "Rails Fixtures"
-    And I fill in "Description" with "Introduce how to add test data with fixtures."
+    And I fill in "Title" with "Rails Votes"
+    And I fill in "Description" with "Introduce building a vote."
     And I press "Create"
     
   Scenario: viewing votes already cast
@@ -17,3 +17,8 @@ Feature: Votes
     When I go to the topics page
     And I follow "+1"
     Then I should see "1 vote"
+
+  Scenario: voting on a topic
+    When I go to the topics page
+    And I follow "-1"
+    Then I should see "0 votes"
