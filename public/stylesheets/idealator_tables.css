@@ -5,7 +5,13 @@
 }
 
 .topics_list .topic td {
-  white-space: nowrap;
+    white-space: nowrap;
+    vertical-align: top;
+    padding: 10px 10px 5px;
+}
+
+.topics_list .topic .topic_title {
+    white-space: normal;
 }
 
 .topics_list td {
