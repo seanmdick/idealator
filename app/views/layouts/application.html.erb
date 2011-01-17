@@ -1,19 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-<head>
-  <title>Idealator</title>
-  <%= stylesheet_link_tag :all %>
-  <%= csrf_meta_tag %>
-  <%= javascript_include_tag ["jquery-1.4.4", "jquery-ui-1.8.8", "rails", "application", "topic"] %>
-</head>
-<body>
-  <div class="content">
-    <div class="header">
-      <%= image_tag "idealator_logo.png" %>
-    </div>
-    <div class='flash'></div>
-    <%= yield %>
-  </div>
+  <head>
+    <!-- Appears in the browser title -->
+    <title>Idealator</title>
+    
+    <!-- Rails' anti-forgery protection -->
+    <%= csrf_meta_tag %>
 
-</body>
+    <!-- Stylesheets: include what you want -->
+    <%= stylesheet_link_tag ['scaffold', 'idealator_base', 'idealator_body', 'idealator_main_content', 'idealator_alerts', 'idealator_forms', 'idealator_tables'] %>
+    
+    <!-- Javascript -->
+    <%= javascript_include_tag ["jquery-1.4.4", "jquery-ui-1.8.8", "rails", "application", "topic"] %>
+  </head>
+  <body>
+    <!-- Main content container -->
+    <div class="content">
+      <!-- Heading -->
+      <div class="header">
+        <a href="<%= root_path %>" class="logo-link"><%= image_tag "idealator_logo.png" %></a>
+      </div>
+
+      <!-- Flash alerts that appear in the upper right -->
+      <div class='flash'></div>
+
+      <!-- All other content that comes from view templates -->
+      <%= yield %>
+    </div>
+  </body>
 </html>

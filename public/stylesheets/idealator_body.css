@@ -2,14 +2,20 @@
 body {
     /* Tiled background image */
     background: url("../images/background_tiled.gif") repeat;
+    
+    /* Main font */
+    font-family: "Helvetica", "Arial", sans-serif;
 
     /* Main text color */
     color: #000000;
 
-    /* Main text font */
-    font-family: "Arial", sans-serif;
-    
     /* Get rid of some interior padding on the whole browser layout */
     padding: 0px;
     margin: 0px;
+}
+
+/* Set style on some other popular elements. :) */
+p, ol, ul, li, td, th, input[type="text"], textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.2em;
 }

@@ -1,7 +1,23 @@
+form input[type="text"], textarea {
+    font-size: 125%;
+    width: 500px;
+    padding: 3px;
+}
+
+textarea {
+    height: 10em;
+}
+
 .form_container.link .topic_form {
-  display:none;
+    display:none;
 }
 
 .form_container.form .topic_link {
-  display:none;
+    display:none;
+}
+
+.topic_form {
+    border: 1px solid #e4e4e4;
+    background: #f8f8f8;
+    padding: 20px;
 }

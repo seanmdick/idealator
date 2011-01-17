@@ -1,0 +1,41 @@
+.topics_list {
+    border-collapse: collapse;
+    empty-cells: show;
+    width: 100%;
+}
+
+.topics_list td {
+    background: #f8f8f8;
+    padding: 3px 10px;
+    color: #000000;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.topics_list th {
+    background: #e4e4e4;
+    padding: 3px 10px;
+    color: #555555;
+    text-align: left;
+}
+
+.topics_list .topic-title {
+    font-size: 200%;
+}
+
+.topics_list .topic-title a:link,
+.topics_list .topic-title a:visited {
+    text-decoration: none;
+}
+
+.button_link:link,
+.button_link:visited {
+    border: 1px solid #555555;
+    padding: 2px 5px;
+    color: #000000;
+    background: #dddddd;
+    text-decoration: none;
+}
+
+.button_link:hover {
+    background: #ffffff;
+}

@@ -1,11 +1,10 @@
-<h1>Listing topics</h1>
+<h1>All Topics</h1>
 
 <table class='topics_list'>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th>Topic</th>
     <th></th>
-    <th></th>
+    <th>Votes</th>
     <th></th>
   </tr>
 
@@ -18,6 +17,6 @@
     <%= render :partial => "form", :locals => {:topic => Topic.new} %>
   </div>
   <span class='topic_link'>
-    <%= link_to 'New Topic', "#", :class => :new_topic %>
+    <%= link_to 'New Topic', "#", :class => [:new_topic, :button_link] %>
   </span>
 </div>

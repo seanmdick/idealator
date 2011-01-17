@@ -1,5 +1,9 @@
 /* Required to make absolute positioning work right. */
-
 div {
   position: relative;
+}
+
+/* Makes images NOT have borders because they usuall do by default */
+img {
+    border: 0;
 }
